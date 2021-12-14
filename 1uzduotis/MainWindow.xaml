@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="ilgisBox" HorizontalAlignment="Left" Height="24" Margin="291,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" PreviewTextInput="ilgisBox_PreviewTextInput" TextChanged="SkaiciuotiPasikeitus"/>
+        <TextBox x:Name="plotisBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="291,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="plotisBox_PreviewTextInput" TextChanged="SkaiciuotiPasikeitus"/>
+        <TextBox x:Name="kainaBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="23" Margin="291,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" PreviewTextInput="kainaBox_PreviewTextInput" TextChanged="SkaiciuotiPasikeitus"/>
+
+        <Label x:Name="label" Grid.ColumnSpan="2" Content="Kambario ilgis:" HorizontalAlignment="Left" Margin="138,114,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Grid.ColumnSpan="2" Content="Kambario plotis:" HorizontalAlignment="Left" Margin="138,145,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Grid.ColumnSpan="2" Content="Kvadrato kaina:" HorizontalAlignment="Left" Margin="138,174,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="489,149,0,0" VerticalAlignment="Top" Width="273"/>
+        <Label x:Name="label4" Grid.ColumnSpan="2" Content="" HorizontalAlignment="Left" Margin="459,272,0,0" VerticalAlignment="Top" Height="68" Width="260"/>
+
+        <Button x:Name="button" Grid.ColumnSpan="2" Content="Skaiciuoti" HorizontalAlignment="Left" Margin="138,214,0,0" VerticalAlignment="Top" Width="136" Height="46" Click="Skaiciuoti"/>
+        <Button x:Name="button1" Grid.ColumnSpan="2" Content="Isvalyti laukus" HorizontalAlignment="Left" Margin="291,214,0,0" VerticalAlignment="Top" Width="120" Height="46" Click="ValytiLaukus"/>
+        <Button x:Name="button2" Grid.ColumnSpan="2" Content="Skaiciuoti, kai kilimo plotis 19m" HorizontalAlignment="Left" Margin="138, 280, 0, 0" VerticalAlignment="Top" Width="273" Height="46" Click="Skaiciuoti19m"/>
+
     </Grid>
 </Window>
